@@ -242,7 +242,7 @@ echo "		<img src=\"bargraph.php?start=$starttime&amp;"
                     echo "	</div>\n";
 
                     echo '	<p class="copyright">' . "\n";
-                    echo '		Copyright &copy; 2023 Daniel Schlachta' . "\n";
+                    echo '		Copyright &copy; 2024 Daniel Schlachta' . "\n";
                     echo '	</p>' . "\n";
                     ?>
     </body>
