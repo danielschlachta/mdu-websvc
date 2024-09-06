@@ -1,0 +1,135 @@
+body
+{
+	font-family: Roboto, sans-serif;
+	background-color: #F2F2F2;
+	margin-left: 0;
+	margin-top: 0;
+	width: 100%;
+}
+
+.topheader 
+{
+	position: fixed; left: 0px; top: 0px;
+	width: 100%;
+}
+
+#leftcol
+{
+	padding-top: 6em;
+	margin-left: 1em;
+}
+
+#summary 
+{
+	float: left;
+	padding-right: 2em;
+	padding-bottom: -1em;
+}
+
+.logo
+{
+	float: left;
+	margin-top: -0.4em;
+	padding-right: 0.5em;
+	width: 1.8em;
+	height: 1.8em;
+}
+
+h1
+{
+    background: #3c8d82 url(images/bg.png) repeat-y;
+	border-bottom: #006E63 6px solid;
+	color: white;
+	font-size: 180%;
+	margin: 0;
+	padding: 0.5em;
+	padding-top: 0.8em;
+}
+
+h2
+{
+	font-size: 130%;
+	margin-bottom: 0.5em;
+	margin-top: 2em;
+}
+
+form#card input, select
+{
+	font-family: Roboto, sans-serif;
+	font-size: 120%;
+}
+
+td.cell, td.cell_odd
+{
+	padding: 0.2em;
+	padding-right: 0.3em;
+	background-color: #d8d8d8;
+}
+
+td.cell_odd 
+{
+	background-color: #c8c8c8;
+}
+
+#donut 
+{
+	width: 22em;
+	float: left;
+	padding-bottom: 1em;
+}
+
+#graph
+{
+	padding-left: 1em;
+	padding-bottom: 2em;
+}
+
+#bargraph 
+{
+	width: 22em;
+}
+
+.form 
+{ 
+	font-family: Roboto, sans-serif;
+	font-size: 85%; 
+	float: left;
+}
+
+#interval 
+{
+	margin-left: 0.5em;
+}
+
+#of 
+{
+	float: left;
+	font-size: 110%;
+	margin-top: -0.1em;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+}
+
+@media print {
+	form {
+		display: none;
+	}
+	
+	#graph {
+		white-space: nowrap;
+		margin-top: 5em;
+	}
+}
+
+.copyright
+{
+	background-color: #F2F2F2;
+	color: #646F82;
+	font-size: 70%;
+	position: fixed;
+	bottom: -1em;
+	right: 1em;
+	width: 100%;
+	height: 2em;
+	text-align: right;
+}
