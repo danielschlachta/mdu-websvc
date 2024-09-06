@@ -78,8 +78,8 @@ td.cell_odd
 #lastupdate
 {
     font-size: 90%;
-    margin-top: -0.5em;
-    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: -0.5em;
 }
 
 #donut
@@ -91,13 +91,15 @@ td.cell_odd
 
 #graph
 {
+    margin-top: -1em;
     padding-left: 1em;
-    padding-bottom: 2em;
+    float: left;
 }
 
 #bargraph
 {
     width: 22em;
+    padding-top: 1em;
 }
 
 .form

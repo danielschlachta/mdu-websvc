@@ -132,7 +132,7 @@ if ($resarr['Count'] == 0) {
                     }
                     
                     $lup = fmtime($lastupdate);
-                    echo "			<h2>$simcaption</h2>\n";
+                   // echo "			<h2>$simcaption</h2>\n";
                     echo "          <div id=\"lastupdate\">Last update: $lup\n";
                     /* echo "				<table>\n";
                     echo '					<tr><td class="cell_odd">'
@@ -170,14 +170,8 @@ if ($resarr['Count'] == 0) {
             </div>
         </div>
 
-<?php
-echo "	<div id=\"graph\">\n		<h2>$cal_caption</h2>\n";
-echo "		<img src=\"bargraph.php?start=$starttime&amp;"
- . "end=$endtime&amp;view=$intsel&amp;simid=$simid&amp;"
- . "secret=$mdu_secret\" id=\"bargraph\" alt=\"\" />";
-?>
-
-        <form method="post" action="">
+        <div id="graph">
+            <form method="post" action="">
             <p>
                 <input name="page" value="show" type="submit" class="form" id="submit" />
             </p>
@@ -235,6 +229,14 @@ echo "		<img src=\"bargraph.php?start=$starttime&amp;"
             </p>
         </form>
 
+            
+<?php
+//echo "		<h2>$cal_caption</h2>\n";
+echo "		<img src=\"bargraph.php?start=$starttime&amp;"
+ . "end=$endtime&amp;view=$intsel&amp;simid=$simid&amp;"
+ . "secret=$mdu_secret\" id=\"bargraph\" alt=\"\" />";
+?>
+        </div>
         <div style="clear: both;"></div>	
                     <?php
                     echo "	</div>\n";
