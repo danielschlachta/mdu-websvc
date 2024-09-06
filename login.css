@@ -52,15 +52,16 @@ h2
 {
     font-size: 130%;
     margin-bottom: 0.5em;
-    margin-top: 2em;
+    margin-top: 0.5em;
 }
 
 form#card input, select
 {
     font-family: Roboto, sans-serif;
-    font-size: 120%;
+    font-size: 100%;
 }
 
+/* no longer used sice table is gone, kept for reference
 td.cell, td.cell_odd
 {
     padding: 0.2em;
@@ -71,6 +72,14 @@ td.cell, td.cell_odd
 td.cell_odd
 {
     background-color: #c8c8c8;
+}
+*/
+
+#lastupdate
+{
+    font-size: 90%;
+    margin-top: -0.5em;
+    margin-bottom: 0.5em;
 }
 
 #donut

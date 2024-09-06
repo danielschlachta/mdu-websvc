@@ -130,8 +130,11 @@ if ($resarr['Count'] == 0) {
                         echo "	</div>\n</body>\n</html>\n";
                         exit;
                     }
-
-                    echo "			<h2>$simcaption</h2>\n				<table>\n";
+                    
+                    $lup = fmtime($lastupdate);
+                    echo "			<h2>$simcaption</h2>\n";
+                    echo "          <div id=\"lastupdate\">Last update: $lup\n";
+                    /* echo "				<table>\n";
                     echo '					<tr><td class="cell_odd">'
                     . (strlen($serial) == 19 || strlen($serial) == 32 ? 'SIM Serial' : 'Phone ID')
                     . '</td><td class="cell_odd">' . "$serial</td></tr>\n";
@@ -154,8 +157,10 @@ if ($resarr['Count'] == 0) {
                     echo '					<tr><td class="cell_odd">'
                     . '#Records</td>'
                     . "<td class=\"cell_odd\">$count</td></tr>\n";
-                    ?>
-                </table>
+                    echo "				</table>\n";
+                     */
+                    ?> 
+                
                 <p>
                     <img src="donut.php?serial=<?php
                 echo "$serial&amp;secret=$mdu_secret";
