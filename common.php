@@ -3,7 +3,6 @@
 $sim_table_name = 'sims';
 $slot_table_name = 'slots';
 $history_table_name = 'history';
-$ext_table_name = 'external';
 
 date_default_timezone_set($timezone);
 

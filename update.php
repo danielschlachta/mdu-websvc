@@ -5,12 +5,9 @@ function push($push) {
     global $sim_table_name;
     global $slot_table_name;
     global $history_table_name;
-    global $ext_table_name;
 
     $phoneid = -1;
-    $extrxbytes = 0;
-    $exttxbytes = 0;
-
+    
     if (@$_GET['phone'] != null) {
         $phoneserial = mysqli_real_escape_string($connect, @$_GET['phone']);
 
@@ -24,34 +21,6 @@ function push($push) {
 
         if ($resarr != null)
             $phoneid = $resarr['SimId'];
-
-        mysqli_free_result($resid);
-    }
-
-    if ($phoneid > 0) {
-        $query = 'select sum(RxBytes), sum(TxBytes) from ' . $ext_table_name
-            . ' where PhoneId = ' . $phoneid . ' and RxBytes > 0 and TxBytes > 0';
-
-        if (!(@$resid = mysqli_query($connect, $query)))
-            error('select', $connect);
-
-        $resarr = mysqli_fetch_array($resid);
-
-        $extrxbytes = $resarr[0] + 0;
-        $exttxbytes = $resarr[1] + 0;
-
-        mysqli_free_result($resid);
-
-        $query = 'select sum(TotalRxBytes), sum(TotalTxBytes) from ' . $ext_table_name
-            . ' where PhoneId = ' . $phoneid . ' and RxBytes < 0 or TxBytes < 0';
-
-        if (!(@$resid = mysqli_query($connect, $query)))
-            error('select', $connect);
-
-        $resarr = mysqli_fetch_array($resid);
-
-        $extrxbytes += $resarr[0];
-        $exttxbytes += $resarr[1];
 
         mysqli_free_result($resid);
     }
@@ -133,9 +102,7 @@ function push($push) {
     }
 
     return array(
-        'simserial' => $serial,
-        'extrxbytes' => $extrxbytes,
-        'exttxbytes' => $exttxbytes
+        'simserial' => $serial
     );
 }
 
