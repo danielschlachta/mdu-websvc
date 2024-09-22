@@ -137,7 +137,7 @@ if ($resarr['Count'] == 0) {
                         "<div id=\"simid\">" .
                         (strlen($serial) == 19 || strlen($serial) == 16 ? 
                         'SIM ' . (strlen($serial) == 19 ? "serial" : "ID") : 'Phone ID') 
-                        . ": $serial</div><br>Last update: $lup\n";
+                        . ": $serial</div><br>Last update: $lup</div>\n";
                     /* echo "				<table>\n";
                     echo '					<tr><td class="cell_odd">'
                     . (
