@@ -78,9 +78,15 @@ td.cell_odd
 #lastupdate
 {
     font-size: 90%;
-    margin-top: 0.5em;
-    margin-bottom: -0.5em;
+    padding-top: 0.5em;
 }
+
+#simid
+{
+    font-size: 80%;
+    paddding-bottom: 0.5em;
+}
+
 
 #donut
 {
