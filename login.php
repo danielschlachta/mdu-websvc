@@ -133,10 +133,14 @@ if ($resarr['Count'] == 0) {
                     
                     $lup = fmtime($lastupdate);
                    // echo "			<h2>$simcaption</h2>\n";
-                    echo "          <div id=\"lastupdate\">Last update: $lup\n";
+                    echo "          <div id=\"lastupdate\">" .
+                        "<div id=\"simid\">" .
+                        (strlen($serial) == 19 || strlen($serial) == 16 ? 
+                        'SIM ' . (strlen($serial) == 19 ? "serial" : "ID") : 'Phone ID') 
+                        . ": $serial</div><br>Last update: $lup\n";
                     /* echo "				<table>\n";
                     echo '					<tr><td class="cell_odd">'
-                    . (strlen($serial) == 19 || strlen($serial) == 32 ? 'SIM Serial' : 'Phone ID')
+                    . (
                     . '</td><td class="cell_odd">' . "$serial</td></tr>\n";
                     echo '					<tr><td class="cell">'
                     . 'Last update</td><td class="cell">'
